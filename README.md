@@ -29,7 +29,8 @@ Last file (notice 110 as the latitude., at this point the decision shape takes c
 
 ## Cut the chase
 
-![image](https://user-images.githubusercontent.com/39495790/120113157-c936d080-c196-11eb-80e9-910a95bb0703.png)
+![image](https://user-images.githubusercontent.com/39495790/120114138-64ca4000-c19b-11eb-9ea8-ca0f8a118928.png)
+
 
 ## The magic of GROOVY!!!
 
