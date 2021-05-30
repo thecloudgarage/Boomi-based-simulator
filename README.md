@@ -1,4 +1,4 @@
-# boomi-simulator-process
+# A simulation tool using Boomi
 
 ## Objective
 Build a process on top of Boomi integration that can serve as a simulator and testing tool for various purposes (mqtt/database/kafka/http, etc.)
