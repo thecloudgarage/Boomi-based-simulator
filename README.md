@@ -7,8 +7,11 @@ Build a process on top of Boomi integration that can serve as a simulator and te
 
 ![image](https://user-images.githubusercontent.com/39495790/120115476-6e56a680-c1a1-11eb-8978-618b2158ac6d.png)
 
-The inspiration for this project came due to a need for IOT testing tool, which can feature as a MQTT publisher. The nature of testing involves generating incremental lat/long/temperature data and publishing it to a MQTT broker.
-With this pursuit, I ended up paho and experimenting with mqtt cli tools. However, the level of complexity in building an automated data set and then automating the publishing was too high.
+The inspiration for this project came due to a need for IOT testing tool, which can feature as a MQTT publisher. 
+
+> While that being the case-in-point, I landed up in building this as a generic one that can be extended to diversified simulation testing needs.
+
+The nature of my immediate testing involved generation of incremental lat/long/temperature data and publishing it to a MQTT broker. With this pursuit, I ended up paho and experimenting with mqtt cli tools. However, the level of complexity in building an automated data set and then automating the publishing was too high.
 
 ## Boomi to the rescue
 Boomi Integration service provides a rich featurette of connectors and integration logic inclusive of custom scripting, etc. I decided to take advantage of Boomi Integration to build a simulation tool instead of leveraging docker/linux/windows tools.
@@ -37,6 +40,8 @@ Last file (notice 110 as the latitude., at this point the decision shape takes c
 
 ## The magic of GROOVY!!!
 
+This is the main function that runs inside of the map to incrementally generate data points. Thanks to Boomi., groovy custom scripts extend the low code platform in to a powerful beast..
+
 ```
 import java.util.Properties;
 import java.text.DateFormat;
@@ -59,4 +64,3 @@ longitudeoutput = longitudeinput + 1;
 temperatureoutput = temperatureinput + 1;
 }
 ```
-## Detailed Procedure
