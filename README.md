@@ -4,6 +4,9 @@
 Build a process on top of Boomi integration that can serve as a simulator and testing tool for various purposes (mqtt/database/kafka/http, etc.)
 
 ## Project inspiration
+
+![image](https://user-images.githubusercontent.com/39495790/120115258-811cab80-c1a0-11eb-86d2-16b03e9537cb.png)
+
 The inspiration for this project came due to a need for IOT testing tool, which can feature as a MQTT publisher. The nature of testing involves generating incremental lat/long/temperature data and publishing it to a MQTT broker.
 With this pursuit, I ended up paho and experimenting with mqtt cli tools. However, the level of complexity in building an automated data set and then automating the publishing was too high.
 
