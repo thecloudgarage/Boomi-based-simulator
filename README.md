@@ -44,6 +44,7 @@ Last file (notice 110 as the latitude., at this point the decision shape takes c
 
 This is the main function that runs inside of the map to incrementally generate data points. Thanks to Boomi., groovy custom scripts extend the low code platform in to a powerful beast..
 
+version 1.0 of script (integers)
 ```
 import java.util.Properties;
 import java.text.DateFormat;
@@ -64,4 +65,89 @@ longitudeoutput = longitudeinput + rnd.nextInt(2);
 temperatureoutput = temperatureinput + rnd.nextInt(2);
 }
 ```
-The script also induces a randomness to the incremental values.
+
+version 2.0 of script (decimals)
+
+```
+import java.util.Properties;
+import java.text.DateFormat;
+import java.util.GregorianCalendar;
+import java.util.Calendar;
+import java.util.Date;
+import java.text.SimpleDateFormat
+import java.io.InputStream;
+int intValue = 5;
+for ( int i = 0; i <= intValue; i++) {
+Thread.sleep(5000);
+Calendar cal = Calendar.getInstance();
+DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HHmmss.SSS");
+datetimeoutput = dateFormat.format(cal.getTime());
+latitudeoutput = latitudeinput + Math.random();
+longitudeoutput = longitudeinput + Math.random();
+Random rnd = new Random();
+temperatureoutput = temperatureinput + rnd.nextInt(2);
+}
+```
+
+### input-output-profile for the map function
+
+Create a csv file on your laptop with the following contents.
+```
+newLatitude,newLongitude,newTemperature,newDateTime
+100.0000,90.0000,30.0000,20210530 090053.989
+```
+Create a flatfile profile and configure the options as seen below
+
+![image](https://user-images.githubusercontent.com/39495790/120222423-8ab81900-c25d-11eb-8b4f-98459d68bd12.png)
+
+Import the flatfile created and edit the elements as seen below
+
+![image](https://user-images.githubusercontent.com/39495790/120222692-fb5f3580-c25d-11eb-8842-fdccb99341d1.png)
+
+![image](https://user-images.githubusercontent.com/39495790/120222727-0c0fab80-c25e-11eb-830e-59bdedefa3da.png)
+
+Note the format for temperature has only two decimals instead of four for lat/long
+
+![image](https://user-images.githubusercontent.com/39495790/120222802-2b0e3d80-c25e-11eb-84c2-f89c598be0c9.png)
+
+Ensure the datetime format is as seen below
+
+![image](https://user-images.githubusercontent.com/39495790/120222872-47aa7580-c25e-11eb-8654-73f7e9f9fb3c.png)
+
+### Create the map function
+
+On the input and output select the same profile created above (as we have loop back for iterative values)
+
+![image](https://user-images.githubusercontent.com/39495790/120223141-bf78a000-c25e-11eb-905f-59cc74eea3d2.png)
+
+Add a function of the type custom scripting and select groovy 2.4
+
+![image](https://user-images.githubusercontent.com/39495790/120223210-dfa85f00-c25e-11eb-99f6-04e6d4a8f685.png)
+
+Create the input and output parameters
+
+> NOTE: The input parameters for latitudeinput, latitudeoutput, temperatureinput will of FLOAT type, else the function will not be able to parse decimal values
+
+Copy/paste the above groovy script and save. Link the input values and output values as seen in the above figure and save
+
+### Create a decision shape
+
+![image](https://user-images.githubusercontent.com/39495790/120223560-61988800-c25f-11eb-8848-17344d120071.png)
+
+For the first value, select profile element of newlatitude the flatfile profile created earlier (as shown below) and then on the seccond value, give a static value which we will use to break the loop
+
+![image](https://user-images.githubusercontent.com/39495790/120223630-84c33780-c25f-11eb-939c-6d160f9e4874.png)
+
+ ### Create a Branch
+ 
+ Branch-1 will go the respective target connector
+ Branch-2 will loop back to the start of the map (as seen in the diagram)
+ 
+ ![image](https://user-images.githubusercontent.com/39495790/120223901-f4392700-c25f-11eb-9235-a03bb0c58278.png)
+
+### Decision (true or false)
+
+Link decision true to the branch and false to a stop shape (deselect "continue processing....")
+
+
+
