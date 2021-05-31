@@ -44,32 +44,6 @@ Last file (notice 110 as the latitude., at this point the decision shape takes c
 
 This is the main function that runs inside of the map to incrementally generate data points. Thanks to Boomi., groovy custom scripts extend the low code platform in to a powerful beast..
 
-version 1.0 of script (integers) 
-> Version 1.0 is not used in this example.. it's just a reference
-
-```
-import java.util.Properties;
-import java.text.DateFormat;
-import java.util.GregorianCalendar;
-import java.util.Calendar;
-import java.util.Date;
-import java.text.SimpleDateFormat
-import java.io.InputStream;
-int intValue = 5;
-for ( int i = 0; i <= intValue; i++) {
-Thread.sleep(5000);
-Calendar cal = Calendar.getInstance();
-DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HHmmss.SSS");
-datetimeoutput = dateFormat.format(cal.getTime());
-Random rnd = new Random();
-latitudeoutput = latitudeinput + rnd.nextInt(2);
-longitudeoutput = longitudeinput + rnd.nextInt(2);
-temperatureoutput = temperatureinput + rnd.nextInt(2);
-}
-```
-
-version 2.0 of script (decimals)
-
 ```
 import java.util.Properties;
 import java.text.DateFormat;
