@@ -23,15 +23,13 @@ This helped me further as my target processes that need to be tested via simulat
 
 10 flat files created by the process iteratively. Each flat file has a latitude, longitude, temperature and date/time that was iteratively built via a single seed value.
 
-![image](https://user-images.githubusercontent.com/39495790/120113248-3e0a0a80-c197-11eb-9211-13e636f2ea9b.png)
+![image](https://user-images.githubusercontent.com/39495790/120226668-46307b80-c265-11eb-86ba-da38569d1254.png)
 
-First file (notice 101 is the latitude which is a result of 1 being added to seed value of 100)
+![image](https://user-images.githubusercontent.com/39495790/120226722-5ea09600-c265-11eb-9849-91af974bdd8d.png)
 
-![image](https://user-images.githubusercontent.com/39495790/120113327-904b2b80-c197-11eb-8eee-d389226b1335.png)
+![image](https://user-images.githubusercontent.com/39495790/120226784-80018200-c265-11eb-8b69-e5a35341e8ae.png)
 
 Last file (notice 110 as the latitude., at this point the decision shape takes charge and breaks the loop to complete the process)
-
-![image](https://user-images.githubusercontent.com/39495790/120113356-bd97d980-c197-11eb-8340-74a015e91681.png)
 
 > In this case, I am dumping the data via disk connector as a bunch of flatfiles. These alternatively can be built as records and pushed through the different connectors available in their own profile formats.
 
@@ -44,6 +42,28 @@ Last file (notice 110 as the latitude., at this point the decision shape takes c
 
 This is the main function that runs inside of the map to incrementally generate data points. Thanks to Boomi., groovy custom scripts extend the low code platform in to a powerful beast..
 
+```
+import java.util.Properties;
+import java.text.DateFormat;
+import java.util.GregorianCalendar;
+import java.util.Calendar;
+import java.util.Date;
+import java.text.SimpleDateFormat
+import java.io.InputStream;
+int intValue = 5;
+for ( int i = 0; i <= intValue; i++) {
+Thread.sleep(5000);
+Calendar cal = Calendar.getInstance();
+DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HHmmss.SSS");
+datetimeoutput = dateFormat.format(cal.getTime());
+latitudeoutput = latitudeinput + Math.random();
+longitudeoutput = longitudeinput + Math.random();
+Random rnd = new Random();
+temperatureoutput = temperatureinput + Math.random() -  Math.random() ;
+}
+```
+
+Alternative method to temperature as a whole number (not used in this example., just for reference)
 ```
 import java.util.Properties;
 import java.text.DateFormat;
