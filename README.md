@@ -44,7 +44,9 @@ Last file (notice 110 as the latitude., at this point the decision shape takes c
 
 This is the main function that runs inside of the map to incrementally generate data points. Thanks to Boomi., groovy custom scripts extend the low code platform in to a powerful beast..
 
-version 1.0 of script (integers)
+version 1.0 of script (integers) 
+> Version 1.0 is not used in this example.. it's just a reference
+
 ```
 import java.util.Properties;
 import java.text.DateFormat;
