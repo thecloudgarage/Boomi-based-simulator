@@ -46,7 +46,7 @@ After this the decision observes a false as the latitude value has increased bey
 
 ## Cut the chase
 
-![image](https://user-images.githubusercontent.com/39495790/120114138-64ca4000-c19b-11eb-9ea8-ca0f8a118928.png)
+![image](https://user-images.githubusercontent.com/39495790/120229116-1afc5b00-c26a-11eb-89d3-c3bd5c21ad02.png)
 
 
 ## The magic of GROOVY!!!
