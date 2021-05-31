@@ -44,10 +44,19 @@ After this the decision observes a false as the latitude value has increased bey
 
 > In this case, I am dumping the data via disk connector as a bunch of flatfiles. These alternatively can be built as records and pushed through the different connectors available in their own profile formats.
 
+### MQTT as target connection (using eclipse mosquitto docker image as broker and mosquitto_sub as the client)
+
+![image](https://user-images.githubusercontent.com/39495790/120230483-079ebf00-c26d-11eb-9eae-42a7208f2faf.png)
+
+
+
 ## Cut the chase
 
+### Trial 1 with Disk as target connector
 ![image](https://user-images.githubusercontent.com/39495790/120229116-1afc5b00-c26a-11eb-89d3-c3bd5c21ad02.png)
 
+### Trial 2 with MQTT as target connector
+![image](https://user-images.githubusercontent.com/39495790/120230398-d2926c80-c26c-11eb-84b0-7fe7e35994bf.png)
 
 ## The magic of GROOVY!!!
 
@@ -159,6 +168,18 @@ For the first value, select profile element of newlatitude the flatfile profile 
 ### Decision (true or false)
 
 Link decision true to the branch and false to a stop shape (deselect "continue processing....")
+
+### Disk connector is a straightforward affair (so skipping to document)
+
+### MQTT as target
+
+> Prerequiste: a ubuntu 18.04 machine with docker installed
+
+```
+sudo su
+mkdir eclipse-mosquitto && cd eclipse-mosquitto && mkdir 
+```
+
 
 
 
