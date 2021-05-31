@@ -52,17 +52,16 @@ import java.util.Calendar;
 import java.util.Date;
 import java.text.SimpleDateFormat
 import java.io.InputStream;
-// Specify the length of time to wait in seconds.
-
-// Leave the rest of the script as-is to pass the Documents to the next step.
 int intValue = 5;
 for ( int i = 0; i <= intValue; i++) {
 Thread.sleep(5000);
 Calendar cal = Calendar.getInstance();
 DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HHmmss.SSS");
 datetimeoutput = dateFormat.format(cal.getTime());
-latitudeoutput = latitudeinput + 1;
-longitudeoutput = longitudeinput + 1;
-temperatureoutput = temperatureinput + 1;
+Random rnd = new Random();
+latitudeoutput = latitudeinput + rnd.nextInt(2);
+longitudeoutput = longitudeinput + rnd.nextInt(2);
+temperatureoutput = temperatureinput + rnd.nextInt(2);
 }
 ```
+The script also induces a randomness to the incremental values.
