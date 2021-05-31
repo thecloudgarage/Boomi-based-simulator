@@ -21,7 +21,9 @@ This helped me further as my target processes that need to be tested via simulat
 
 ## Outcome matters
 
-10 flat files created by the process iteratively. Each flat file has a latitude, longitude, temperature and date/time that was iteratively built via a single seed value.
+Iterative flat files created by the process iteratively. Each flat file has a latitude, longitude, temperature and date/time that was iteratively built via a single seed value.
+
+![image](https://user-images.githubusercontent.com/39495790/120226877-b808c500-c265-11eb-824f-35e71af97899.png)
 
 ![image](https://user-images.githubusercontent.com/39495790/120226668-46307b80-c265-11eb-86ba-da38569d1254.png)
 
