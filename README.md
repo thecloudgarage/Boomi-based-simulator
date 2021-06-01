@@ -32,14 +32,14 @@ This helped me further as my target processes that need to be tested via simulat
 
 # Ready, set, GO!
 
-## STEP-1 Creating the environment and installation token
+## Creating the environment and installation token
 
 The below steps outline creation of an environment and a token that will be used to install our atom on docker. Ensure that you copy your environment ID and the token in notepad for further use
 
 ![image](https://user-images.githubusercontent.com/39495790/120277991-5f234600-c2d2-11eb-8fd3-479c78f0d066.png)
 ![image](https://user-images.githubusercontent.com/39495790/120278150-8a0d9a00-c2d2-11eb-9f74-53509e431a0e.png)
 
-## STEP-2 Bootstrap the atom via docker
+## Install Atom on Docker
 
 Assumption: You are logged into a ubuntu host with docker installed. We will create basic directories to host the atom installation files
 ```
@@ -78,8 +78,7 @@ Go back to your atomsphere account > manage and observe the atom operational in 
 
 Observe that we are changing the heap size to 2G of memory. You can skip it in case your system does not have enough memory. Once you update the memory, accept the restart and wait till the atom comes online.
 
-## STEP-3 Parent working folder/directory in atomsphere
-* Create a new folder in atomsphere build service which we will use to store all our processes.
+Create a new folder in atomsphere build service which we will use to store all our processes.
 
 ## STEP-4 Building our MQTT simulator process
 
