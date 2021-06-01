@@ -37,7 +37,7 @@ The below steps outline creation of an environment and a token that will be used
 
 ## Install Atom on Docker
 
-Assumption: You are logged into a ubuntu host with docker installed. We will create basic directories to host the atom installation files
+**Assumption:** You are logged into a ubuntu host with docker installed. We will create basic directories to host the atom installation files
 ```
 sudo su
 mkdir boomi_atom
