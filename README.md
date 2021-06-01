@@ -121,7 +121,7 @@ temperatureoutput = temperatureinput + rnd.nextInt(2);
 
 We use the message shape to seed a message in a flatfile format. This will be iterated by the map shape and the function embedded in it.
 
-![image](https://user-images.githubusercontent.com/39495790/120260470-98988900-c2b3-11eb-8b1b-a991214607f8.png)
+![image](https://user-images.githubusercontent.com/39495790/120261602-d7c7d980-c2b5-11eb-80a2-91e600c3efa4.png)
 
 You can copy the below in to the message shape. Alternatively if you change any of the column headers, the map definitions and function will need to be re-aligned.
 
@@ -146,7 +146,7 @@ newLatitude,newLongitude,newTemperature,newDateTime
 
 Create a new flatfile profile and configure the options as seen below
 
-![image](https://user-images.githubusercontent.com/39495790/120222423-8ab81900-c25d-11eb-8b4f-98459d68bd12.png)
+![image](https://user-images.githubusercontent.com/39495790/120261574-ca125400-c2b5-11eb-9d65-8e8d2d2119d9.png)
 
 <br />
 
