@@ -86,6 +86,13 @@ Once done, issue the below command to initialize the container and atom installa
 ```
 docker-compose up -d
 ```
+Go back to your atomsphere account > manage and observe the atom operational in the specified environment
+
+![image](https://user-images.githubusercontent.com/39495790/120277609-e45a2b00-c2d1-11eb-9d49-359c39202423.png)
+
+Observe that we are changing the heap size to 2G of memory. You can skip it in case your system does not have enough memory.
+
+
 
 
 
