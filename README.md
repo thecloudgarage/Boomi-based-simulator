@@ -137,9 +137,9 @@ Ensure the datetime format is as seen below
 
 <br />
 
-### Create the map function
+### Create the map
 
-Create a new map and choose the flatfile profile created above. We are going to use the same profile for input and output as we have a loop back for iterative values
+Create a new map and choose the flatfile profile created above as input and output profile. We are going to use the same profile for input and output as we have a loop back for iterative values
 
 ![image](https://user-images.githubusercontent.com/39495790/120223141-bf78a000-c25e-11eb-905f-59cc74eea3d2.png)
 
