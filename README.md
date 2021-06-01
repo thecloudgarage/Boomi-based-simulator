@@ -54,6 +54,8 @@ Herein, we move away from disk being a target connection to a MQTT connector
 ### Trial 2 with MQTT as target connector
 ![image](https://user-images.githubusercontent.com/39495790/120230398-d2926c80-c26c-11eb-84b0-7fe7e35994bf.png)
 
+The process remains the same with the only difference being in the last connector, which is now a MQTT connector
+
 ## The magic of GROOVY!!!
 
 This is the main function that runs inside of the map to incrementally generate data points. Thanks to Boomi., groovy custom scripts extend the low code platform in to a powerful beast..
