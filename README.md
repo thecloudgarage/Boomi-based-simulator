@@ -74,6 +74,8 @@ Go back to your atomsphere account > manage and observe the atom operational in 
 
 Observe that we are changing the **heap size to 2G of memory**. You can skip it in case your system does not have enough memory. Once you update the memory, accept the restart and wait till the atom comes online.
 
+![image](https://user-images.githubusercontent.com/39495790/120335643-438a6080-c30f-11eb-8f05-c8c13f4ccbbf.png)
+
 Create a new folder in atomsphere build service which we will use to store all our processes.
 
 ## Building our MQTT simulator process
