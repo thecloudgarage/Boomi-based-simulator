@@ -22,7 +22,9 @@ While that being the case, this project got all sorts of weird ideas to finally 
 Boomi Integration service provides a rich featurette of connectors and integration logic inclusive of custom scripting, etc. I decided to take advantage of Boomi Integration to build a simulation tool instead of leveraging docker/linux/windows tools.
 This helped me further as my target processes that need to be tested via simulation were deployed on Boomi itself
 
-![image](https://user-images.githubusercontent.com/39495790/120336212-c0b5d580-c30f-11eb-8ee3-ebaa4b8e4805.png)
+<br />
+
+![image](https://user-images.githubusercontent.com/39495790/120336889-6ff2ac80-c310-11eb-8524-fac45c1a5465.png)
 
 ![image](https://user-images.githubusercontent.com/39495790/120276911-f4253f80-c2d0-11eb-82c2-fdf89804ec54.png)
 
@@ -75,7 +77,7 @@ Go back to your atomsphere account > manage and observe the atom operational in 
 
 Observe that we are changing the **heap size to 2G of memory**. You can skip it in case your system does not have enough memory. Once you update the memory, accept the restart and wait till the atom comes online.
 
-![image](https://user-images.githubusercontent.com/39495790/120335643-438a6080-c30f-11eb-8f05-c8c13f4ccbbf.png)
+![image](https://user-images.githubusercontent.com/39495790/120337081-a03a4b00-c310-11eb-9263-bbfd22702284.png)
 
 Create a new folder in atomsphere build service which we will use to store all our processes.
 
