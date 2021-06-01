@@ -24,13 +24,13 @@ This helped me further as my target processes that need to be tested via simulat
 
 <br />
 
-### Trial 1 with Disk as target connector
+### Disk as target connector (if you just want test a iterative loop function)
 ![image](https://user-images.githubusercontent.com/39495790/120229116-1afc5b00-c26a-11eb-89d3-c3bd5c21ad02.png)
 
 <br />
 
-### Trial 2 with MQTT as target connector
-![image](https://user-images.githubusercontent.com/39495790/120230398-d2926c80-c26c-11eb-84b0-7fe7e35994bf.png)
+### MQTT as target connector
+![image](https://user-images.githubusercontent.com/39495790/120266415-77d63080-c2bf-11eb-8a91-67b571c222f9.png)
 
 The process remains the same with the only difference being in the last connector, which is now a MQTT connector
 
