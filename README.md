@@ -28,8 +28,7 @@ This helped me further as my target processes that need to be tested via simulat
 * Docker host preferably with 4G or 8G RAM
 
 ## What are we going to build
-
-![image](https://user-images.githubusercontent.com/39495790/120275259-ac9db400-c2ce-11eb-8ba5-264846f91438.png)
+![image](https://user-images.githubusercontent.com/39495790/120275383-d6ef7180-c2ce-11eb-946a-7351f3ef3da6.png)
 
 
 ![image](https://user-images.githubusercontent.com/39495790/120266415-77d63080-c2bf-11eb-8a91-67b571c222f9.png)
