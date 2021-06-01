@@ -43,14 +43,46 @@ We can observe the mosquitto_sub incrementing the output as it listens to the to
 
 ## Ready, set, GO!
 
-### Creating the environment and atom
+### Creating the environment and installation token
 
-Objective: Create a dockerized atom
+The below steps outline creation of an environment and a token that will be used to install our atom on docker. Ensure that you copy your environment ID and the token in notepad for further use
 
 ![image](https://user-images.githubusercontent.com/39495790/120272658-13b96980-c2cb-11eb-9046-0373157a220c.png)
 ![image](https://user-images.githubusercontent.com/39495790/120272480-cd640a80-c2ca-11eb-83c7-8bd5ade44fc9.png)
 
+### Bootstrap the atom via docker
 
+Assumption: You are logged into a ubuntu host with docker installed. We will create basic directories to host the atom installation files
+```
+sudo su
+mkdir boomi_atom
+cd boomi-atom
+mkdir boomi_dir
+```
+Create a docker-compose.yml in the boomi_atom (parent directory)
+```
+version: '3'
+services:
+  test-docker-1:
+    image: boomi/atom:release
+    privileged: true
+    environment:
+      - URL=https://platform.boomi.com
+      - BOOMI_ATOMNAME=test-docker-1
+      - BOOMI_CONTAINERNAME=test-docker-1
+      - ATOM_LOCALHOSTID=test-docker-1
+      - INSTALL_TOKEN=<paste-your-token-do-not-leave-space-after-equal-sign>
+      - BOOMI_ENVIRONMENTID=<paste-your-environment-id-do-not-leave-space-after-equal-sign>
+      - INSTALLATION_DIRECTORY=/var/boomi
+    ports:
+      - "9090:9090"
+    volumes:
+      - "./boomi_dir:/var/boomi:consistent"
+```
+Once done, issue the below command to initialize the container and atom installation
+```
+docker-compose up -d
+```
 
 
 
