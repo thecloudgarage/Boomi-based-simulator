@@ -22,6 +22,8 @@ This helped me further as my target processes that need to be tested via simulat
 
 ## Outcome matters
 
+Outputs of the process run.
+
 ### Warm up: Disk as a target connection
 
 Iterative flat files created by the process iteratively. Each flat file has a latitude, longitude, temperature and date/time that was iteratively built via a single seed value.
