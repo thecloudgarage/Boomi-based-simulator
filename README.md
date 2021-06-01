@@ -11,7 +11,7 @@ The inspiration for this project came due to a need for IOT testing tool, which 
 
 <br />
 
-![image](https://user-images.githubusercontent.com/39495790/120267500-aead4600-c2c1-11eb-8355-9a60d0007c79.png)
+![image](https://user-images.githubusercontent.com/39495790/120280155-f8535c00-c2d4-11eb-9cbd-1463b19bef43.png)
 
 <br />
 
