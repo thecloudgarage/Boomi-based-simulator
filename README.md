@@ -23,8 +23,6 @@ The nature of immediate testing was to generate randonmess of incremental lat/lo
 Boomi Integration service provides a rich featurette of connectors and integration logic inclusive of custom scripting, etc. I decided to take advantage of Boomi Integration to build a simulation tool instead of leveraging docker/linux/windows tools.
 This helped me further as my target processes that need to be tested via simulation were deployed on Boomi itself
 
-<br />
-
 ## Prequisities
 * Basic working knowledge of Boomi Integration
 * Docker host preferably with 4G or 8G RAM
@@ -49,7 +47,7 @@ We can observe the mosquitto_sub incrementing the output as it listens to the to
 
 Objective: Create a dockerized atom
 
-![image](https://user-images.githubusercontent.com/39495790/120272420-b3c2c300-c2ca-11eb-9036-c3046cccae39.png)
+![image](https://user-images.githubusercontent.com/39495790/120272658-13b96980-c2cb-11eb-9046-0373157a220c.png)
 ![image](https://user-images.githubusercontent.com/39495790/120272480-cd640a80-c2ca-11eb-83c7-8bd5ade44fc9.png)
 
 
