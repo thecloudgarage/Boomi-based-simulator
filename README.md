@@ -8,7 +8,7 @@ Build a process on top of Boomi integration that can serve as a simulator and te
 
 ## Project inspiration
 
-The inspiration for this project came due to a need for IOT testing tool, which can feature as a MQTT publisher. 
+The inspiration for this project came due to a need for IOT testing tool, which can feature as a MQTT publisher. The nature of immediate testing was to generate randonmess of incremental lat/long/temperature data and publishing it at a periodic interval to a MQTT broker. With this pursuit, I ended up paho and experimenting with mqtt cli tools. However, the level of complexity in building an automated data set and then automating the publishing was too high. 
 
 <br />
 
@@ -16,9 +16,7 @@ The inspiration for this project came due to a need for IOT testing tool, which 
 
 <br />
 
-> While that being the case-in-point, this one landed up as a generic process that can be extended to diversified simulation testing needs.
-
-The nature of immediate testing was to generate randonmess of incremental lat/long/temperature data and publishing it at a periodic interval to a MQTT broker. With this pursuit, I ended up paho and experimenting with mqtt cli tools. However, the level of complexity in building an automated data set and then automating the publishing was too high.
+While that being the case, this project got all sorts of weird ideas to finally become a small end-to-end showcase. The simulator process can now be gracefully used for any kind of data set generation and diversify it's application to any target connector supported by Boomi.
 
 ## Boomi to the rescue
 Boomi Integration service provides a rich featurette of connectors and integration logic inclusive of custom scripting, etc. I decided to take advantage of Boomi Integration to build a simulation tool instead of leveraging docker/linux/windows tools.
