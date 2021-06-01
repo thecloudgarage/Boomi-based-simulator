@@ -25,13 +25,8 @@ This helped me further as my target processes that need to be tested via simulat
 
 Iterative flat files created by the process iteratively. Each flat file has a latitude, longitude, temperature and date/time that was iteratively built via a single seed value.
 
-![image](https://user-images.githubusercontent.com/39495790/120226877-b808c500-c265-11eb-824f-35e71af97899.png)
+![image](https://user-images.githubusercontent.com/39495790/120259811-3f7c2580-c2b2-11eb-85ee-410f928cb262.png)
 
-![image](https://user-images.githubusercontent.com/39495790/120226668-46307b80-c265-11eb-86ba-da38569d1254.png)
-
-![image](https://user-images.githubusercontent.com/39495790/120226722-5ea09600-c265-11eb-9849-91af974bdd8d.png)
-
-![image](https://user-images.githubusercontent.com/39495790/120226784-80018200-c265-11eb-8b69-e5a35341e8ae.png)
 
 Last file (notice 109.9953 as the latitude)
 
