@@ -42,14 +42,14 @@ We can observe the mosquitto_sub incrementing the output as it listens to the to
 
 # Ready, set, GO!
 
-## Creating the environment and installation token
+## STEP-1 Creating the environment and installation token
 
 The below steps outline creation of an environment and a token that will be used to install our atom on docker. Ensure that you copy your environment ID and the token in notepad for further use
 
 ![image](https://user-images.githubusercontent.com/39495790/120277991-5f234600-c2d2-11eb-8fd3-479c78f0d066.png)
 ![image](https://user-images.githubusercontent.com/39495790/120278150-8a0d9a00-c2d2-11eb-9f74-53509e431a0e.png)
 
-## Bootstrap the atom via docker
+## STEP-2 Bootstrap the atom via docker
 
 Assumption: You are logged into a ubuntu host with docker installed. We will create basic directories to host the atom installation files
 ```
@@ -88,10 +88,10 @@ Go back to your atomsphere account > manage and observe the atom operational in 
 
 Observe that we are changing the heap size to 2G of memory. You can skip it in case your system does not have enough memory. Once you update the memory, accept the restart and wait till the atom comes online.
 
-## Parent working folder/directory in atomsphere
+## STEP-3 Parent working folder/directory in atomsphere
 * Create a new folder in atomsphere build service which we will use to store all our processes.
 
-## Building our MQTT simulator process
+## STEP-4 Building our MQTT simulator process
 
 This how our Boomi simulator process will look like at the end.
 
@@ -225,16 +225,56 @@ For the first value, select profile element of newlatitude the flatfile profile 
 
 Link decision true to the branch and false to a stop shape (deselect "continue processing....")
 
-### Disk connector is a straightforward affair (so skipping to document)
-
-### MQTT as target
+### MQTT publisher
 
 > Prerequiste: a ubuntu 18.04 machine with docker installed
 
 ```
 sudo su
-mkdir eclipse-mosquitto && cd eclipse-mosquitto && mkdir 
+mkdir eclipse-mosquitto && cd eclipse-mosquitto && mkdir mosquitto && cd mosquitto
 ```
+Create a config file named mosquitto.conf with the contents pasted from this file. 
+```
+vi mosquitto.conf
+```
+paste the contents of this file url into it
+
+https://abc.com
+
+Once done we will navigate back to parent directory and create our docker-compose manifest
+```
+cd ..
+vi docker-compose.yml
+```
+and paste the below contents
+```
+version: '3'
+services:
+  mosquitto:
+    image: eclipse-mosquitto:1.6.14
+    hostname: mosquitto
+    container_name: mosquitto
+    expose:
+      - "1883"
+      - "9001"
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+```
+Once done, we will start our eclipse-mosquitto mqtt broker
+```
+docker-compose up -d
+```
+### MQTT connection from Boomi
+Go back to the process in atomsphere and follow the below diagram to finish the MQTT connection and close it with a STOP shape
+![image](https://user-images.githubusercontent.com/39495790/120282901-3bfb9500-c2d8-11eb-9d1d-34697a07c042.png)
+
+### TEST and OBSERVE
+Open a separate console to the ubuntu
+If all goes well, then hit "TEST" button on the process and let it execute
+
 
 
 
