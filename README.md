@@ -20,7 +20,6 @@ Boomi Integration service provides a rich featurette of connectors and integrati
 This helped me further as my target processes that need to be tested via simulation were deployed on Boomi itself
 
 <br />
-
 ## Outcome matters
 
 ### Disk as a target connection
