@@ -39,6 +39,7 @@ Last file (notice 109.9953 as the latitude, our threshold is set at 110)
 
 ![image](https://user-images.githubusercontent.com/39495790/120228410-a8d74680-c268-11eb-89a4-beaf0b791654.png)
 
+<br />
 
 > In this case, I am dumping the data via disk connector as a bunch of flatfiles. These alternatively can be built as records and pushed through the different connectors available in their own profile formats.
 
