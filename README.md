@@ -105,6 +105,9 @@ temperatureoutput = temperatureinput + rnd.nextInt(2);
 
 ### Seed message shape
 
+![image](https://user-images.githubusercontent.com/39495790/120260470-98988900-c2b3-11eb-8b1b-a991214607f8.png)
+
+
 ![image](https://user-images.githubusercontent.com/39495790/120224195-9b1dc300-c260-11eb-9a97-e698e8f58944.png) 
 
 ### input-output-profile for the map function
