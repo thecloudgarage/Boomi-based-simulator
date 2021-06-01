@@ -5,7 +5,7 @@ Build a process on top of Boomi integration that can serve as a simulator and te
 
 > special thanks to Chris Cappetta https://github.com/ccappetta and Premjit Mishra from Boomi who have always helped get the better of the platform!
 
-![image](https://user-images.githubusercontent.com/39495790/120322633-40d53e80-c302-11eb-9ee2-250f3b4a5bdd.png)
+![image](https://user-images.githubusercontent.com/39495790/120323158-d375dd80-c302-11eb-874e-c44f7222a54d.png)
 
 ## Project inspiration
 
@@ -29,8 +29,7 @@ This helped me further as my target processes that need to be tested via simulat
 ## What are we going to build
 ![image](https://user-images.githubusercontent.com/39495790/120276911-f4253f80-c2d0-11eb-82c2-fdf89804ec54.png)
 
-![image](https://user-images.githubusercontent.com/39495790/120322633-40d53e80-c302-11eb-9ee2-250f3b4a5bdd.png)
-
+![image](https://user-images.githubusercontent.com/39495790/120323397-120b9800-c303-11eb-9a98-ce4e14db7bd3.png)
 
 # Ready, set, GO!
 
