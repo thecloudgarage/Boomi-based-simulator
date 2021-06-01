@@ -80,7 +80,7 @@ Observe that we are changing the heap size to 2G of memory. You can skip it in c
 
 Create a new folder in atomsphere build service which we will use to store all our processes.
 
-## STEP-4 Building our MQTT simulator process
+## Building our MQTT simulator process
 
 This how our Boomi simulator process will look like at the end.
 
@@ -104,7 +104,7 @@ latitude,longitude,temperature
 ```
 <br />
 
-### Step-2 input-output-profile for the map function
+### Flatfile profiles (input-output-profile for the map function)
 
 Within the map, we will place a function to iterate seed data. The function will be supported via input and output profile that will be passed via the function.Create a csv file on your laptop with the following contents.
 
@@ -257,7 +257,7 @@ Once done, we will start our eclipse-mosquitto mqtt broker
 ```
 docker-compose up -d
 ```
-### MQTT connection from Boomi
+### MQTT connector
 Go back to the process in atomsphere and follow the below diagram to finish the MQTT connection and close it with a STOP shape
 ![image](https://user-images.githubusercontent.com/39495790/120282901-3bfb9500-c2d8-11eb-9d1d-34697a07c042.png)
 
@@ -273,11 +273,7 @@ We can observe the mosquitto_sub incrementing the output as it listens to the to
 
 ![image](https://user-images.githubusercontent.com/39495790/120230483-079ebf00-c26d-11eb-9eae-42a7208f2faf.png)
 
-## Outcome matters
-
-Outputs of the process run.
-
-## MQTT as target connection (using eclipse mosquitto as broker and mosquitto_sub as the client)
+![image](https://user-images.githubusercontent.com/39495790/120322535-226f4300-c302-11eb-987b-057197e80ef7.png)
 
 
 
