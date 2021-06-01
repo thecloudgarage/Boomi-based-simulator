@@ -40,6 +40,8 @@ Last file (notice 109.9953 as the latitude, our threshold is set at 110)
 
 ### MQTT as target connection (using eclipse mosquitto docker image as broker and mosquitto_sub as the client)
 
+Herein, we move away from disk being a target connection to a MQTT connector
+
 ![image](https://user-images.githubusercontent.com/39495790/120230483-079ebf00-c26d-11eb-9eae-42a7208f2faf.png)
 
 
