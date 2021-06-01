@@ -25,57 +25,37 @@ This helped me further as my target processes that need to be tested via simulat
 
 <br />
 
+## Prequisities
+* Basic working knowledge of Boomi Integration
+* Docker host preferably with 4G or 8G RAM
+
 ## What are we going to build
 
-### Disk as target connector (if you just want test a iterative loop function)
-
-![image](https://user-images.githubusercontent.com/39495790/120229116-1afc5b00-c26a-11eb-89d3-c3bd5c21ad02.png)
-
-<br />
-
-### MQTT as target connector
-
 ![image](https://user-images.githubusercontent.com/39495790/120266415-77d63080-c2bf-11eb-8a91-67b571c222f9.png)
-
-The process remains the same with the only difference being in the last connector, which is now a MQTT connector
-
-<br />
 
 ## Outcome matters
 
 Outputs of the process run.
 
-## Disk as a target connection
-
-Iterative flat files created by the process iteratively. Each flat file has a latitude, longitude, temperature and date/time that was iteratively built via a single seed value.
-
-![image](https://user-images.githubusercontent.com/39495790/120259918-7ce0b300-c2b2-11eb-9409-fb9d798c8259.png)
-
-
-Last file (notice 109.9953 as the latitude, our threshold is set at 110)
-
-> After this the decision shape in the process observes a false as the latitude value has increased beyond the 110 threshold set (note the value 110.9178)
-
-<br />
-
-![image](https://user-images.githubusercontent.com/39495790/120267637-fd5ae000-c2c1-11eb-90b6-15fdb7498ab2.png)
-
-<br />
-
-> In this case, I am dumping the data via disk connector as a bunch of flatfiles. These alternatively can be built as records and pushed through the different connectors available in their own profile formats.
-
-<br />
-
 ## MQTT as target connection (using eclipse mosquitto as broker and mosquitto_sub as the client)
 
-Herein, we move away from disk being a target connection to a MQTT connector. We can observe the mosquitto_sub incrementing the output as it listens to the topic
-
+We can observe the mosquitto_sub incrementing the output as it listens to the topic
 
 ![image](https://user-images.githubusercontent.com/39495790/120230483-079ebf00-c26d-11eb-9eae-42a7208f2faf.png)
 
-<br />
-
 ## Ready, set, GO!
+
+### Creating the environment and atom
+
+Objective: Create a dockerized atom
+
+![image](https://user-images.githubusercontent.com/39495790/120272420-b3c2c300-c2ca-11eb-9036-c3046cccae39.png)
+![image](https://user-images.githubusercontent.com/39495790/120272480-cd640a80-c2ca-11eb-83c7-8bd5ade44fc9.png)
+
+
+
+
+
 
 ### Step-1 Seed message shape
 
