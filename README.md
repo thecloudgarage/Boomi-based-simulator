@@ -18,8 +18,8 @@ The nature of my immediate testing involved generation of incremental lat/long/t
 ## Boomi to the rescue
 Boomi Integration service provides a rich featurette of connectors and integration logic inclusive of custom scripting, etc. I decided to take advantage of Boomi Integration to build a simulation tool instead of leveraging docker/linux/windows tools.
 This helped me further as my target processes that need to be tested via simulation were deployed on Boomi itself
-
 <br />
+
 ## Outcome matters
 
 ### Disk as a target connection
