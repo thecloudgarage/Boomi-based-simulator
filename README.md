@@ -27,15 +27,11 @@ This helped me further as my target processes that need to be tested via simulat
 ## What are we going to build
 ![image](https://user-images.githubusercontent.com/39495790/120276911-f4253f80-c2d0-11eb-82c2-fdf89804ec54.png)
 
-![image](https://user-images.githubusercontent.com/39495790/120323397-120b9800-c303-11eb-9a98-ce4e14db7bd3.png)
-
 # Ready, set, GO!
 
 ## Prequisities
 * Basic working knowledge of Boomi Integration
 * Docker host preferably with 4G or 8G RAM
-
-![image](https://user-images.githubusercontent.com/39495790/120322971-a0334e80-c302-11eb-8733-bc180a41366c.png)
 
 ## Creating the environment and installation token
 
@@ -43,8 +39,6 @@ The below steps outline creation of an environment and a token that will be used
 
 ![image](https://user-images.githubusercontent.com/39495790/120277991-5f234600-c2d2-11eb-8fd3-479c78f0d066.png)
 ![image](https://user-images.githubusercontent.com/39495790/120278150-8a0d9a00-c2d2-11eb-9f74-53509e431a0e.png)
-
-![image](https://user-images.githubusercontent.com/39495790/120322990-a45f6c00-c302-11eb-9530-e4c46672fd7d.png)
 
 ## Install Atom on Docker
 
@@ -86,8 +80,6 @@ Go back to your atomsphere account > manage and observe the atom operational in 
 Observe that we are changing the heap size to 2G of memory. You can skip it in case your system does not have enough memory. Once you update the memory, accept the restart and wait till the atom comes online.
 
 Create a new folder in atomsphere build service which we will use to store all our processes.
-
-![image](https://user-images.githubusercontent.com/39495790/120323024-acb7a700-c302-11eb-96c9-096f1f2ac145.png)
 
 ## Building our MQTT simulator process
 
@@ -282,7 +274,6 @@ We can observe the mosquitto_sub incrementing the output as it listens to the to
 
 ![image](https://user-images.githubusercontent.com/39495790/120230483-079ebf00-c26d-11eb-9eae-42a7208f2faf.png)
 
-![image](https://user-images.githubusercontent.com/39495790/120322535-226f4300-c302-11eb-987b-057197e80ef7.png)
 
 
 
