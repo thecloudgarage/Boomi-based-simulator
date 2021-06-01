@@ -54,7 +54,7 @@ Last file (notice 109.9953 as the latitude, our threshold is set at 110)
 
 <br />
 
-![image](https://user-images.githubusercontent.com/39495790/120228410-a8d74680-c268-11eb-89a4-beaf0b791654.png)
+![image](https://user-images.githubusercontent.com/39495790/120267637-fd5ae000-c2c1-11eb-90b6-15fdb7498ab2.png)
 
 <br />
 
