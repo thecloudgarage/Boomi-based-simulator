@@ -220,7 +220,6 @@ Link decision true to the branch and false to a stop shape (deselect "continue p
 
 ```
 sudo su
-apt-get install mosquitto-clients -y
 mkdir eclipse-mosquitto && cd eclipse-mosquitto && mkdir mosquitto && cd mosquitto
 ```
 Create a config file named mosquitto.conf with the contents pasted from this file. 
@@ -262,18 +261,15 @@ Go back to the process in atomsphere and follow the below diagram to finish the 
 ![image](https://user-images.githubusercontent.com/39495790/120282901-3bfb9500-c2d8-11eb-9d1d-34697a07c042.png)
 
 ### TEST and OBSERVE
-Open a separate console to the ubuntu machine where we installed the broker and run the below command
+Next we will run a test docker container for mosquitto subscriber. Open a separate console to the ubuntu machine where we installed the broker and run the below command
 ```
 sudo su
-mosquitto_sub -h <ip-address-of-the-machine> -t mqtt-test-1/#
+docker run -it --rm efrecon/mqtt-client sub  -h 172.31.0.100 -t "#" -v
 ```
-This enables a subscriber that listens to all topics starting with mqtt-test-1/
-Go back to the Atomsphere and hit "TEST" button on the simulator process and let it execute
-We can observe the mosquitto_sub incrementing the output as it listens to the topic
+This enables a subscriber that listens to all topics. Go back to the Atomsphere and hit "TEST" button on the simulator process and let it execute
+We can observe the mosquitto_sub incrementing the output as it listens to the topic. We can observe that the last line emits a rough value of 109 latitude, beyond which the process decision shape turns to failse (threshold set at 110) and terminates the process.
 
-![image](https://user-images.githubusercontent.com/39495790/120230483-079ebf00-c26d-11eb-9eae-42a7208f2faf.png)
-
-
+![image](https://user-images.githubusercontent.com/39495790/120355234-be0fac00-c320-11eb-9148-5caa808ec2a2.png)
 
 
 
