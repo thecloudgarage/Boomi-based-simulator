@@ -44,7 +44,7 @@ mkdir boomi_atom
 cd boomi-atom
 mkdir boomi_dir
 ```
-Create a docker-compose.yml in the boomi_atom (parent directory)
+Create a docker-compose.yml in the boomi_atom (parent directory) with the below content. **Replace** the environment ID and installation token with your values.
 ```
 version: '3'
 services:
