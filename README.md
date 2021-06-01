@@ -89,7 +89,7 @@ Go back to your atomsphere account > manage and observe the atom operational in 
 Observe that we are changing the heap size to 2G of memory. You can skip it in case your system does not have enough memory. Once you update the memory, accept the restart and wait till the atom comes online.
 
 ### Parent working folder/directory in atomsphere
-* Create a new folder in which we will build all our processes
+* Create a new folder in atomsphere build service which we will use to store all our processes.
 
 ### MQTT simulator process
 
@@ -97,7 +97,7 @@ This how our Boomi simulator process will look like at the end.
 
 ![image](https://user-images.githubusercontent.com/39495790/120266415-77d63080-c2bf-11eb-8a91-67b571c222f9.png)
 
-##### Create a new process component. We will use this process to simulate an iterative data-set for IOT data
+Create a new process component. We will use this process to simulate an iterative data-set for IOT data
 
 ![image](https://user-images.githubusercontent.com/39495790/120279052-a0682580-c2d3-11eb-842d-655352532b51.png)
 
