@@ -29,6 +29,9 @@ This helped me further as my target processes that need to be tested via simulat
 
 ## What are we going to build
 
+![image](https://user-images.githubusercontent.com/39495790/120275259-ac9db400-c2ce-11eb-8ba5-264846f91438.png)
+
+
 ![image](https://user-images.githubusercontent.com/39495790/120266415-77d63080-c2bf-11eb-8a91-67b571c222f9.png)
 
 ## Outcome matters
