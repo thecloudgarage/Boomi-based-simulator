@@ -37,6 +37,9 @@ Last file (notice 109.9953 as the latitude, our threshold is set at 110)
 
 > In this case, I am dumping the data via disk connector as a bunch of flatfiles. These alternatively can be built as records and pushed through the different connectors available in their own profile formats.
 
+<br />
+<br />
+<br />
 
 ### MQTT as target connection (using eclipse mosquitto docker image as broker and mosquitto_sub as the client)
 
