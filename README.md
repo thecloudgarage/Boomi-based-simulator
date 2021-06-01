@@ -105,10 +105,16 @@ temperatureoutput = temperatureinput + rnd.nextInt(2);
 
 ### Seed message shape
 
+We use the message shape to seed a message in a flatfile format. This will be iterated by the map shape and the function embedded in it.
+
 ![image](https://user-images.githubusercontent.com/39495790/120260470-98988900-c2b3-11eb-8b1b-a991214607f8.png)
 
+You can copy the below in to the message shape. Alternatively if you change any of the column headers, the map definitions and function will need to be re-aligned.
 
-![image](https://user-images.githubusercontent.com/39495790/120224195-9b1dc300-c260-11eb-9a97-e698e8f58944.png) 
+```
+latitude,longitude,temperature
+100.0001,90.0001,30.00
+```
 
 ### input-output-profile for the map function
 
