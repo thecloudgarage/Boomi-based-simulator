@@ -5,6 +5,8 @@ Build a process on top of Boomi integration that can serve as a simulator and te
 
 > special thanks to Chris Cappetta https://github.com/ccappetta and Premjit Mishra from Boomi who have always helped get the better of the platform!
 
+![image](https://user-images.githubusercontent.com/39495790/120322633-40d53e80-c302-11eb-9ee2-250f3b4a5bdd.png)
+
 ## Project inspiration
 
 The inspiration for this project came due to a need for IOT testing tool, which can feature as a MQTT publisher. 
