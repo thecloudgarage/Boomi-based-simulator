@@ -9,7 +9,11 @@ Build a process on top of Boomi integration that can serve as a simulator and te
 
 The inspiration for this project came due to a need for IOT testing tool, which can feature as a MQTT publisher. 
 
+<br />
+
 ![image](https://user-images.githubusercontent.com/39495790/120267500-aead4600-c2c1-11eb-8355-9a60d0007c79.png)
+
+<br />
 
 > While that being the case-in-point, this one landed up as a generic process that can be extended to diversified simulation testing needs.
 
