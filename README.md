@@ -153,17 +153,31 @@ Create a new flatfile profile and configure the options as seen below
 
 Import the flatfile created and edit the elements as seen below
 
-![image](https://user-images.githubusercontent.com/39495790/120222692-fb5f3580-c25d-11eb-8842-fdccb99341d1.png)
+<br />
 
-![image](https://user-images.githubusercontent.com/39495790/120222727-0c0fab80-c25e-11eb-830e-59bdedefa3da.png)
+![image](https://user-images.githubusercontent.com/39495790/120265764-4d37a800-c2be-11eb-9ea6-96e7dcd0a5d8.png)
 
-Note the format for temperature has only two decimals instead of four for lat/long
+<br />
 
-![image](https://user-images.githubusercontent.com/39495790/120222802-2b0e3d80-c25e-11eb-84c2-f89c598be0c9.png)
+![image](https://user-images.githubusercontent.com/39495790/120265782-558fe300-c2be-11eb-8207-b0e40acdaba6.png)
+
+<br />
+
+> Note the format for temperature has only two decimals instead of four for lat/long
+
+<br />
+
+![image](https://user-images.githubusercontent.com/39495790/120265835-6a6c7680-c2be-11eb-8484-c6caddd76808.png)
+
+<br />
 
 Ensure the datetime format is as seen below
 
-![image](https://user-images.githubusercontent.com/39495790/120222872-47aa7580-c25e-11eb-8654-73f7e9f9fb3c.png)
+<br />
+
+![image](https://user-images.githubusercontent.com/39495790/120265851-71938480-c2be-11eb-83f8-a4267f40a436.png)
+
+<br />
 
 ### Create the map function
 
