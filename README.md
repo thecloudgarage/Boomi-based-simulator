@@ -50,8 +50,8 @@ We can observe the mosquitto_sub incrementing the output as it listens to the to
 
 The below steps outline creation of an environment and a token that will be used to install our atom on docker. Ensure that you copy your environment ID and the token in notepad for further use
 
-![image](https://user-images.githubusercontent.com/39495790/120272658-13b96980-c2cb-11eb-9046-0373157a220c.png)
-![image](https://user-images.githubusercontent.com/39495790/120272480-cd640a80-c2ca-11eb-83c7-8bd5ade44fc9.png)
+![image](https://user-images.githubusercontent.com/39495790/120277991-5f234600-c2d2-11eb-8fd3-479c78f0d066.png)
+![image](https://user-images.githubusercontent.com/39495790/120278150-8a0d9a00-c2d2-11eb-9f74-53509e431a0e.png)
 
 ### Bootstrap the atom via docker
 
@@ -90,14 +90,18 @@ Go back to your atomsphere account > manage and observe the atom operational in 
 
 ![image](https://user-images.githubusercontent.com/39495790/120277609-e45a2b00-c2d1-11eb-9d49-359c39202423.png)
 
-Observe that we are changing the heap size to 2G of memory. You can skip it in case your system does not have enough memory.
+Observe that we are changing the heap size to 2G of memory. You can skip it in case your system does not have enough memory. Once you update the memory, accept the restart and wait till the atom comes online.
 
+### Parent working folder/directory in atomsphere
+* Create a new folder in which we will build all our processes
 
+### MQTT simulator process
 
+##### Create a new process component. We will use this process to simulate an iterative data-set for IOT data
 
+![image](https://user-images.githubusercontent.com/39495790/120279052-a0682580-c2d3-11eb-842d-655352532b51.png)
 
-
-### Step-1 Seed message shape
+##### Seed message shape
 
 We use the message shape to seed a message in a flatfile format. This will be iterated by the map shape and the function embedded in it.
 
