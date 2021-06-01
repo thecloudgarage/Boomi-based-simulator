@@ -33,8 +33,7 @@ This helped me further as my target processes that need to be tested via simulat
 
 The below steps outline creation of an environment and a token that will be used to install our atom on docker. Ensure that you copy your environment ID and the token in notepad for further use
 
-![image](https://user-images.githubusercontent.com/39495790/120277991-5f234600-c2d2-11eb-8fd3-479c78f0d066.png)
-![image](https://user-images.githubusercontent.com/39495790/120278150-8a0d9a00-c2d2-11eb-9f74-53509e431a0e.png)
+![image](https://user-images.githubusercontent.com/39495790/120333370-3ff5da00-c30d-11eb-8b5c-e964e786edae.png)
 
 ## Install Atom on Docker
 
