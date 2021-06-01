@@ -19,6 +19,8 @@ The nature of my immediate testing involved generation of incremental lat/long/t
 Boomi Integration service provides a rich featurette of connectors and integration logic inclusive of custom scripting, etc. I decided to take advantage of Boomi Integration to build a simulation tool instead of leveraging docker/linux/windows tools.
 This helped me further as my target processes that need to be tested via simulation were deployed on Boomi itself
 
+<br />
+
 ## Outcome matters
 
 ### Disk as a target connection
@@ -38,8 +40,6 @@ Last file (notice 109.9953 as the latitude, our threshold is set at 110)
 > In this case, I am dumping the data via disk connector as a bunch of flatfiles. These alternatively can be built as records and pushed through the different connectors available in their own profile formats.
 
 <br />
-<br />
-<br />
 
 ### MQTT as target connection (using eclipse mosquitto docker image as broker and mosquitto_sub as the client)
 
@@ -47,17 +47,22 @@ Herein, we move away from disk being a target connection to a MQTT connector
 
 ![image](https://user-images.githubusercontent.com/39495790/120230483-079ebf00-c26d-11eb-9eae-42a7208f2faf.png)
 
-
+<br />
 
 ## Cut the chase
 
+<br />
 ### Trial 1 with Disk as target connector
 ![image](https://user-images.githubusercontent.com/39495790/120229116-1afc5b00-c26a-11eb-89d3-c3bd5c21ad02.png)
+
+<br />
 
 ### Trial 2 with MQTT as target connector
 ![image](https://user-images.githubusercontent.com/39495790/120230398-d2926c80-c26c-11eb-84b0-7fe7e35994bf.png)
 
 The process remains the same with the only difference being in the last connector, which is now a MQTT connector
+
+<br />
 
 ## The magic of GROOVY!!!
 
@@ -106,7 +111,8 @@ temperatureoutput = temperatureinput + rnd.nextInt(2);
 }
 ```
 
-### Seed message shape
+<br />
+### Step-1 Seed message shape
 
 We use the message shape to seed a message in a flatfile format. This will be iterated by the map shape and the function embedded in it.
 
@@ -118,8 +124,9 @@ You can copy the below in to the message shape. Alternatively if you change any 
 latitude,longitude,temperature
 100.0001,90.0001,30.00
 ```
+<br />
 
-### input-output-profile for the map function
+### Step-2 input-output-profile for the map function
 
 Create a csv file on your laptop with the following contents.
 ```
