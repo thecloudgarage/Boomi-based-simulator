@@ -22,7 +22,7 @@ This helped me further as my target processes that need to be tested via simulat
 
 ## Outcome matters
 
-### Disk as a target connection
+### Warm up: Disk as a target connection
 
 Iterative flat files created by the process iteratively. Each flat file has a latitude, longitude, temperature and date/time that was iteratively built via a single seed value.
 
@@ -40,7 +40,7 @@ Last file (notice 109.9953 as the latitude, our threshold is set at 110)
 
 <br />
 
-### MQTT as target connection (using eclipse mosquitto docker image as broker and mosquitto_sub as the client)
+### Actual use-case: MQTT as target connection (using eclipse mosquitto docker image as broker and mosquitto_sub as the client)
 
 Herein, we move away from disk being a target connection to a MQTT connector
 
