@@ -20,7 +20,7 @@ The inspiration for this project came due to a need for IOT testing tool, which 
 
 The nature of immediate testing was to generate randonmess of incremental lat/long/temperature data and publishing it at a periodic interval to a MQTT broker. With this pursuit, I ended up paho and experimenting with mqtt cli tools. However, the level of complexity in building an automated data set and then automating the publishing was too high.
 
-<div style="background-color:black;color:white;padding:20px;">
+<div style="background-color:black !important;color:white !important;padding:20px !important;">
   <h2>London</h2>
   <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
   <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
