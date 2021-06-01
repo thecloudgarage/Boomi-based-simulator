@@ -40,16 +40,16 @@ We can observe the mosquitto_sub incrementing the output as it listens to the to
 
 ![image](https://user-images.githubusercontent.com/39495790/120230483-079ebf00-c26d-11eb-9eae-42a7208f2faf.png)
 
-## Ready, set, GO!
+# Ready, set, GO!
 
-### Creating the environment and installation token
+## Creating the environment and installation token
 
 The below steps outline creation of an environment and a token that will be used to install our atom on docker. Ensure that you copy your environment ID and the token in notepad for further use
 
 ![image](https://user-images.githubusercontent.com/39495790/120277991-5f234600-c2d2-11eb-8fd3-479c78f0d066.png)
 ![image](https://user-images.githubusercontent.com/39495790/120278150-8a0d9a00-c2d2-11eb-9f74-53509e431a0e.png)
 
-### Bootstrap the atom via docker
+## Bootstrap the atom via docker
 
 Assumption: You are logged into a ubuntu host with docker installed. We will create basic directories to host the atom installation files
 ```
@@ -88,10 +88,10 @@ Go back to your atomsphere account > manage and observe the atom operational in 
 
 Observe that we are changing the heap size to 2G of memory. You can skip it in case your system does not have enough memory. Once you update the memory, accept the restart and wait till the atom comes online.
 
-### Parent working folder/directory in atomsphere
+## Parent working folder/directory in atomsphere
 * Create a new folder in atomsphere build service which we will use to store all our processes.
 
-### MQTT simulator process
+## Building our MQTT simulator process
 
 This how our Boomi simulator process will look like at the end.
 
@@ -101,7 +101,7 @@ Create a new process component. We will use this process to simulate an iterativ
 
 ![image](https://user-images.githubusercontent.com/39495790/120279052-a0682580-c2d3-11eb-842d-655352532b51.png)
 
-##### Seed message shape
+### Seed message shape
 
 We use the message shape to seed a message in a flatfile format. This will be iterated by the map shape and the function embedded in it.
 
@@ -197,28 +197,6 @@ latitudeoutput = latitudeinput + Math.random();
 longitudeoutput = longitudeinput + Math.random();
 Random rnd = new Random();
 temperatureoutput = temperatureinput + Math.random() -  Math.random() ;
-}
-```
-
-DONT USE: Alternative method to temperature as a whole number (not used in this example., just for reference)
-```
-import java.util.Properties;
-import java.text.DateFormat;
-import java.util.GregorianCalendar;
-import java.util.Calendar;
-import java.util.Date;
-import java.text.SimpleDateFormat
-import java.io.InputStream;
-int intValue = 5;
-for ( int i = 0; i <= intValue; i++) {
-Thread.sleep(5000);
-Calendar cal = Calendar.getInstance();
-DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HHmmss.SSS");
-datetimeoutput = dateFormat.format(cal.getTime());
-latitudeoutput = latitudeinput + Math.random();
-longitudeoutput = longitudeinput + Math.random();
-Random rnd = new Random();
-temperatureoutput = temperatureinput + rnd.nextInt(2);
 }
 ```
 
