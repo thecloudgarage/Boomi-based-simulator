@@ -151,6 +151,10 @@ Copy paste the below in the script section
 
 This is the main function that runs inside of the map to incrementally generate data points. Thanks to Boomi., groovy custom scripts extend the low code platform in to a powerful beast..
 
+![image](https://user-images.githubusercontent.com/39495790/120268011-b3bec500-c2c2-11eb-8556-491cbf6d96dc.png)
+
+Copy paste the below script.
+
 ```
 import java.util.Properties;
 import java.text.DateFormat;
@@ -193,8 +197,6 @@ Random rnd = new Random();
 temperatureoutput = temperatureinput + rnd.nextInt(2);
 }
 ```
-
-![image](https://user-images.githubusercontent.com/39495790/120223210-dfa85f00-c25e-11eb-99f6-04e6d4a8f685.png)
 
 Create the input and output parameters
 
