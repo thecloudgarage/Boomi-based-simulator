@@ -30,16 +30,6 @@ This helped me further as my target processes that need to be tested via simulat
 ## What are we going to build
 ![image](https://user-images.githubusercontent.com/39495790/120276911-f4253f80-c2d0-11eb-82c2-fdf89804ec54.png)
 
-## Outcome matters
-
-Outputs of the process run.
-
-## MQTT as target connection (using eclipse mosquitto as broker and mosquitto_sub as the client)
-
-We can observe the mosquitto_sub incrementing the output as it listens to the topic
-
-![image](https://user-images.githubusercontent.com/39495790/120230483-079ebf00-c26d-11eb-9eae-42a7208f2faf.png)
-
 # Ready, set, GO!
 
 ## STEP-1 Creating the environment and installation token
@@ -231,6 +221,7 @@ Link decision true to the branch and false to a stop shape (deselect "continue p
 
 ```
 sudo su
+apt-get install mosquitto-clients -y
 mkdir eclipse-mosquitto && cd eclipse-mosquitto && mkdir mosquitto && cd mosquitto
 ```
 Create a config file named mosquitto.conf with the contents pasted from this file. 
@@ -272,8 +263,24 @@ Go back to the process in atomsphere and follow the below diagram to finish the 
 ![image](https://user-images.githubusercontent.com/39495790/120282901-3bfb9500-c2d8-11eb-9d1d-34697a07c042.png)
 
 ### TEST and OBSERVE
-Open a separate console to the ubuntu
-If all goes well, then hit "TEST" button on the process and let it execute
+Open a separate console to the ubuntu machine where we installed the broker and run the below command
+```
+sudo su
+mosquitto_sub -h <ip-address-of-the-machine> -t mqtt-test-1/#
+```
+This enables a subscriber that listens to all topics starting with mqtt-test-1/
+Go back to the Atomsphere and hit "TEST" button on the simulator process and let it execute
+We can observe the mosquitto_sub incrementing the output as it listens to the topic
+
+![image](https://user-images.githubusercontent.com/39495790/120230483-079ebf00-c26d-11eb-9eae-42a7208f2faf.png)
+
+## Outcome matters
+
+Outputs of the process run.
+
+## MQTT as target connection (using eclipse mosquitto as broker and mosquitto_sub as the client)
+
+
 
 
 
