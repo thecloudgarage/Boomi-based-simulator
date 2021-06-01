@@ -20,11 +20,27 @@ Boomi Integration service provides a rich featurette of connectors and integrati
 This helped me further as my target processes that need to be tested via simulation were deployed on Boomi itself
 <br />
 
+## What are we going to build
+
+<br />
+
+### Trial 1 with Disk as target connector
+![image](https://user-images.githubusercontent.com/39495790/120229116-1afc5b00-c26a-11eb-89d3-c3bd5c21ad02.png)
+
+<br />
+
+### Trial 2 with MQTT as target connector
+![image](https://user-images.githubusercontent.com/39495790/120230398-d2926c80-c26c-11eb-84b0-7fe7e35994bf.png)
+
+The process remains the same with the only difference being in the last connector, which is now a MQTT connector
+
+<br />
+
 ## Outcome matters
 
 Outputs of the process run.
 
-### Warm up: Disk as a target connection
+## Warm up: Disk as a target connection
 
 Iterative flat files created by the process iteratively. Each flat file has a latitude, longitude, temperature and date/time that was iteratively built via a single seed value.
 
@@ -50,22 +66,6 @@ Last file (notice 109.9953 as the latitude, our threshold is set at 110)
 Herein, we move away from disk being a target connection to a MQTT connector
 
 ![image](https://user-images.githubusercontent.com/39495790/120230483-079ebf00-c26d-11eb-9eae-42a7208f2faf.png)
-
-<br />
-
-## Cut the chase!
-
-<br />
-
-### Trial 1 with Disk as target connector
-![image](https://user-images.githubusercontent.com/39495790/120229116-1afc5b00-c26a-11eb-89d3-c3bd5c21ad02.png)
-
-<br />
-
-### Trial 2 with MQTT as target connector
-![image](https://user-images.githubusercontent.com/39495790/120230398-d2926c80-c26c-11eb-84b0-7fe7e35994bf.png)
-
-The process remains the same with the only difference being in the last connector, which is now a MQTT connector
 
 <br />
 
