@@ -11,9 +11,9 @@ Build a process on top of Boomi integration that can serve as a simulator and te
 
 The inspiration for this project came due to a need for IOT testing tool, which can feature as a MQTT publisher. 
 
-> While that being the case-in-point, I landed up in building this as a generic one that can be extended to diversified simulation testing needs.
+> While that being the case-in-point, this one landed up as a generic process that can be extended to diversified simulation testing needs.
 
-The nature of my immediate testing involved generation of incremental lat/long/temperature data and publishing it to a MQTT broker. With this pursuit, I ended up paho and experimenting with mqtt cli tools. However, the level of complexity in building an automated data set and then automating the publishing was too high.
+The nature of immediate testing was to generate randonmess of incremental lat/long/temperature data and publishing it at a periodic interval to a MQTT broker. With this pursuit, I ended up paho and experimenting with mqtt cli tools. However, the level of complexity in building an automated data set and then automating the publishing was too high.
 
 ## Boomi to the rescue
 Boomi Integration service provides a rich featurette of connectors and integration logic inclusive of custom scripting, etc. I decided to take advantage of Boomi Integration to build a simulation tool instead of leveraging docker/linux/windows tools.
@@ -24,11 +24,13 @@ This helped me further as my target processes that need to be tested via simulat
 ## What are we going to build
 
 ### Disk as target connector (if you just want test a iterative loop function)
+
 ![image](https://user-images.githubusercontent.com/39495790/120229116-1afc5b00-c26a-11eb-89d3-c3bd5c21ad02.png)
 
 <br />
 
 ### MQTT as target connector
+
 ![image](https://user-images.githubusercontent.com/39495790/120266415-77d63080-c2bf-11eb-8a91-67b571c222f9.png)
 
 The process remains the same with the only difference being in the last connector, which is now a MQTT connector
@@ -62,7 +64,8 @@ Last file (notice 109.9953 as the latitude, our threshold is set at 110)
 
 ## MQTT as target connection (using eclipse mosquitto as broker and mosquitto_sub as the client)
 
-Herein, we move away from disk being a target connection to a MQTT connector
+Herein, we move away from disk being a target connection to a MQTT connector. We can observe the mosquitto_sub incrementing the output as it listens to the topic
+
 
 ![image](https://user-images.githubusercontent.com/39495790/120230483-079ebf00-c26d-11eb-9eae-42a7208f2faf.png)
 
