@@ -90,6 +90,9 @@ Create a new process component. We will use this process to simulate an iterativ
 
 We use the message shape to seed a message in a flatfile format. This will be iterated by the map shape and the function embedded in it.
 
+![image](https://user-images.githubusercontent.com/39495790/120334650-6f591680-c30e-11eb-8b52-d77659c592ce.png)
+
+
 ![image](https://user-images.githubusercontent.com/39495790/120261602-d7c7d980-c2b5-11eb-80a2-91e600c3efa4.png)
 
 You can copy the below in to the message shape. Alternatively if you change any of the column headers, the map definitions and function will need to be re-aligned.
