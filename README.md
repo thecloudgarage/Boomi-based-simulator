@@ -30,8 +30,6 @@ Iterative flat files created by the process iteratively. Each flat file has a la
 
 Last file (notice 109.9953 as the latitude)
 
-![image](https://user-images.githubusercontent.com/39495790/120228382-96f5a380-c268-11eb-8eec-9ce830291914.png)
-
 After this the decision observes a false as the latitude value has increased beyond the 110 threshold set (note the value 110.9178)
 
 ![image](https://user-images.githubusercontent.com/39495790/120228410-a8d74680-c268-11eb-89a4-beaf0b791654.png)
