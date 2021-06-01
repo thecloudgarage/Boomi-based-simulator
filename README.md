@@ -197,11 +197,13 @@ Copy/paste the above groovy script and save. Link the input values and output va
 
 ### Create a decision shape
 
-![image](https://user-images.githubusercontent.com/39495790/120223560-61988800-c25f-11eb-8848-17344d120071.png)
+![image](https://user-images.githubusercontent.com/39495790/120356141-a4bb2f80-c321-11eb-983d-9b017ca4265d.png)
 
-For the first value, select profile element of newlatitude the flatfile profile created earlier (as shown below) and then on the seccond value, give a static value which we will use to break the loop
+The decision shapes helps to compare two values and then determine outcomes based on true/false. Herein we will try to match our latitude value with a static value of 110 such that whenever the loop hits that threshold, the process will complete. If this is not set, the Atom will get into an infinite loop.
 
-![image](https://user-images.githubusercontent.com/39495790/120223630-84c33780-c25f-11eb-939c-6d160f9e4874.png)
+For the first value, select profile element of newlatitude the flatfile profile created earlier (as shown below) and then on the seccond value, give a static value of 110 or whatever you feel comfortable. 
+
+![image](https://user-images.githubusercontent.com/39495790/120356508-08455d00-c322-11eb-8fc9-011e3d9cf68c.png)
 
  ### Create a Branch
  
