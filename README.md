@@ -30,10 +30,6 @@ This helped me further as my target processes that need to be tested via simulat
 ## What are we going to build
 ![image](https://user-images.githubusercontent.com/39495790/120276911-f4253f80-c2d0-11eb-82c2-fdf89804ec54.png)
 
-
-
-![image](https://user-images.githubusercontent.com/39495790/120266415-77d63080-c2bf-11eb-8a91-67b571c222f9.png)
-
 ## Outcome matters
 
 Outputs of the process run.
@@ -96,6 +92,10 @@ Observe that we are changing the heap size to 2G of memory. You can skip it in c
 * Create a new folder in which we will build all our processes
 
 ### MQTT simulator process
+
+This how our Boomi simulator process will look like at the end.
+
+![image](https://user-images.githubusercontent.com/39495790/120266415-77d63080-c2bf-11eb-8a91-67b571c222f9.png)
 
 ##### Create a new process component. We will use this process to simulate an iterative data-set for IOT data
 
