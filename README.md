@@ -52,9 +52,10 @@ Herein, we move away from disk being a target connection to a MQTT connector
 
 <br />
 
-## Cut the chase
+## Cut the chase!
 
 <br />
+
 ### Trial 1 with Disk as target connector
 ![image](https://user-images.githubusercontent.com/39495790/120229116-1afc5b00-c26a-11eb-89d3-c3bd5c21ad02.png)
 
@@ -115,6 +116,7 @@ temperatureoutput = temperatureinput + rnd.nextInt(2);
 ```
 
 <br />
+
 ### Step-1 Seed message shape
 
 We use the message shape to seed a message in a flatfile format. This will be iterated by the map shape and the function embedded in it.
@@ -131,14 +133,22 @@ latitude,longitude,temperature
 
 ### Step-2 input-output-profile for the map function
 
+Within the map, we will place a function to iterate seed data. The function will be supported via input and output profile that will be passed via the function.
+
+<br />
+
 Create a csv file on your laptop with the following contents.
 ```
 newLatitude,newLongitude,newTemperature,newDateTime
 100.0000,90.0000,30.0000,20210530 090053.989
 ```
-Create a flatfile profile and configure the options as seen below
+<br />
+
+Create a new flatfile profile and configure the options as seen below
 
 ![image](https://user-images.githubusercontent.com/39495790/120222423-8ab81900-c25d-11eb-8b4f-98459d68bd12.png)
+
+<br />
 
 Import the flatfile created and edit the elements as seen below
 
