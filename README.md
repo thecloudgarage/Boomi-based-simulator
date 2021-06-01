@@ -5,7 +5,6 @@ Build a process on top of Boomi integration that can serve as a simulator and te
 
 > special thanks to Chris Cappetta https://github.com/ccappetta and Premjit Mishra from Boomi who have always helped get the better of the platform!
 
-![image](https://user-images.githubusercontent.com/39495790/120323158-d375dd80-c302-11eb-874e-c44f7222a54d.png)
 
 ## Project inspiration
 
@@ -24,8 +23,6 @@ The nature of immediate testing was to generate randonmess of incremental lat/lo
 ## Boomi to the rescue
 Boomi Integration service provides a rich featurette of connectors and integration logic inclusive of custom scripting, etc. I decided to take advantage of Boomi Integration to build a simulation tool instead of leveraging docker/linux/windows tools.
 This helped me further as my target processes that need to be tested via simulation were deployed on Boomi itself
-
-![image](https://user-images.githubusercontent.com/39495790/120323397-120b9800-c303-11eb-9a98-ce4e14db7bd3.png)
 
 ## What are we going to build
 ![image](https://user-images.githubusercontent.com/39495790/120276911-f4253f80-c2d0-11eb-82c2-fdf89804ec54.png)
