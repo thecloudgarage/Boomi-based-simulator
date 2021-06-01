@@ -39,7 +39,7 @@ The process remains the same with the only difference being in the last connecto
 
 Outputs of the process run.
 
-## Warm up: Disk as a target connection
+## Disk as a target connection
 
 Iterative flat files created by the process iteratively. Each flat file has a latitude, longitude, temperature and date/time that was iteratively built via a single seed value.
 
@@ -60,7 +60,7 @@ Last file (notice 109.9953 as the latitude, our threshold is set at 110)
 
 <br />
 
-### Actual use-case: MQTT as target connection (using eclipse mosquitto docker image as broker and mosquitto_sub as the client)
+## MQTT as target connection (using eclipse mosquitto as broker and mosquitto_sub as the client)
 
 Herein, we move away from disk being a target connection to a MQTT connector
 
@@ -68,54 +68,7 @@ Herein, we move away from disk being a target connection to a MQTT connector
 
 <br />
 
-## The magic of GROOVY!!!
-
-This is the main function that runs inside of the map to incrementally generate data points. Thanks to Boomi., groovy custom scripts extend the low code platform in to a powerful beast..
-
-```
-import java.util.Properties;
-import java.text.DateFormat;
-import java.util.GregorianCalendar;
-import java.util.Calendar;
-import java.util.Date;
-import java.text.SimpleDateFormat
-import java.io.InputStream;
-int intValue = 5;
-for ( int i = 0; i <= intValue; i++) {
-Thread.sleep(5000);
-Calendar cal = Calendar.getInstance();
-DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HHmmss.SSS");
-datetimeoutput = dateFormat.format(cal.getTime());
-latitudeoutput = latitudeinput + Math.random();
-longitudeoutput = longitudeinput + Math.random();
-Random rnd = new Random();
-temperatureoutput = temperatureinput + Math.random() -  Math.random() ;
-}
-```
-
-Alternative method to temperature as a whole number (not used in this example., just for reference)
-```
-import java.util.Properties;
-import java.text.DateFormat;
-import java.util.GregorianCalendar;
-import java.util.Calendar;
-import java.util.Date;
-import java.text.SimpleDateFormat
-import java.io.InputStream;
-int intValue = 5;
-for ( int i = 0; i <= intValue; i++) {
-Thread.sleep(5000);
-Calendar cal = Calendar.getInstance();
-DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HHmmss.SSS");
-datetimeoutput = dateFormat.format(cal.getTime());
-latitudeoutput = latitudeinput + Math.random();
-longitudeoutput = longitudeinput + Math.random();
-Random rnd = new Random();
-temperatureoutput = temperatureinput + rnd.nextInt(2);
-}
-```
-
-<br />
+## Ready, set, GO!
 
 ### Step-1 Seed message shape
 
@@ -133,14 +86,13 @@ latitude,longitude,temperature
 
 ### Step-2 input-output-profile for the map function
 
-Within the map, we will place a function to iterate seed data. The function will be supported via input and output profile that will be passed via the function.
+Within the map, we will place a function to iterate seed data. The function will be supported via input and output profile that will be passed via the function.Create a csv file on your laptop with the following contents.
 
 <br />
 
-Create a csv file on your laptop with the following contents.
 ```
 newLatitude,newLongitude,newTemperature,newDateTime
-100.0000,90.0000,30.0000,20210530 090053.989
+100.0000,90.0000,30.00,20210530 090053.989
 ```
 <br />
 
@@ -150,7 +102,7 @@ Create a new flatfile profile and configure the options as seen below
 
 <br />
 
-Import the flatfile created and edit the elements as seen below
+Import the flatfile created on your laptop and edit the elements as seen below
 
 <br />
 
@@ -180,11 +132,60 @@ Ensure the datetime format is as seen below
 
 ### Create the map function
 
-On the input and output select the same profile created above (as we have loop back for iterative values)
+Create a new map and choose the flatfile profile created above. We are going to use the same profile for input and output as we have a loop back for iterative values
 
 ![image](https://user-images.githubusercontent.com/39495790/120223141-bf78a000-c25e-11eb-905f-59cc74eea3d2.png)
 
 Add a function of the type custom scripting and select groovy 2.4
+
+Copy paste the below in the script section
+
+##### The magic of GROOVY!!!
+
+This is the main function that runs inside of the map to incrementally generate data points. Thanks to Boomi., groovy custom scripts extend the low code platform in to a powerful beast..
+
+```
+import java.util.Properties;
+import java.text.DateFormat;
+import java.util.GregorianCalendar;
+import java.util.Calendar;
+import java.util.Date;
+import java.text.SimpleDateFormat
+import java.io.InputStream;
+int intValue = 5;
+for ( int i = 0; i <= intValue; i++) {
+Thread.sleep(5000);
+Calendar cal = Calendar.getInstance();
+DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HHmmss.SSS");
+datetimeoutput = dateFormat.format(cal.getTime());
+latitudeoutput = latitudeinput + Math.random();
+longitudeoutput = longitudeinput + Math.random();
+Random rnd = new Random();
+temperatureoutput = temperatureinput + Math.random() -  Math.random() ;
+}
+```
+
+DONT USE: Alternative method to temperature as a whole number (not used in this example., just for reference)
+```
+import java.util.Properties;
+import java.text.DateFormat;
+import java.util.GregorianCalendar;
+import java.util.Calendar;
+import java.util.Date;
+import java.text.SimpleDateFormat
+import java.io.InputStream;
+int intValue = 5;
+for ( int i = 0; i <= intValue; i++) {
+Thread.sleep(5000);
+Calendar cal = Calendar.getInstance();
+DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HHmmss.SSS");
+datetimeoutput = dateFormat.format(cal.getTime());
+latitudeoutput = latitudeinput + Math.random();
+longitudeoutput = longitudeinput + Math.random();
+Random rnd = new Random();
+temperatureoutput = temperatureinput + rnd.nextInt(2);
+}
+```
 
 ![image](https://user-images.githubusercontent.com/39495790/120223210-dfa85f00-c25e-11eb-99f6-04e6d4a8f685.png)
 
