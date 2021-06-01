@@ -72,13 +72,13 @@ Go back to your atomsphere account > manage and observe the atom operational in 
 
 ![image](https://user-images.githubusercontent.com/39495790/120277609-e45a2b00-c2d1-11eb-9d49-359c39202423.png)
 
-Observe that we are changing the heap size to 2G of memory. You can skip it in case your system does not have enough memory. Once you update the memory, accept the restart and wait till the atom comes online.
+Observe that we are changing the **heap size to 2G of memory**. You can skip it in case your system does not have enough memory. Once you update the memory, accept the restart and wait till the atom comes online.
 
 Create a new folder in atomsphere build service which we will use to store all our processes.
 
 ## Building our MQTT simulator process
 
-This how our Boomi simulator process will look like at the end.
+This process will serve as a simulator to generate mock data for IoT sensor. The output of this process will be sent to a MQTT broker via a connector. This how our Boomi simulator process will look like at the end.
 
 ![image](https://user-images.githubusercontent.com/39495790/120266415-77d63080-c2bf-11eb-8a91-67b571c222f9.png)
 
