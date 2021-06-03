@@ -28,7 +28,7 @@ services:
       - zookeeper
       - kafka
       - kafka-connect
-	  - mosquitto
+      - mosquitto
 
 
   mosquitto:
