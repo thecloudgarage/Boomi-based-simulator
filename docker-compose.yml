@@ -29,6 +29,7 @@ services:
       - kafka
       - kafka-connect
       - mosquitto
+      - gpsinventory
 
 
   mosquitto:
@@ -204,7 +205,8 @@ services:
     image: adminer
     restart: always
     depends_on:
-      - iotinstallation
+      - gpsinventory
     ports:
       - "32003:8080"
-
+    links:
+      - gpsinventory
