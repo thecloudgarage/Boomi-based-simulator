@@ -13,7 +13,9 @@ latitudeoutput = latitudeinput + Math.random();
 longitudeoutput = longitudeinput + Math.random();
 temperatureoutput = temperatureinput + Math.random() -  Math.random();
 fueloutput = fuelinput -  Math.random();
+Random rnd = new Random();
+speedoutput = speedinput + rnd.nextInt(100);
 Calendar cal = Calendar.getInstance();
-DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HHmmss.SSS");
-datetimeoutput = dateFormat.format(cal.getTime());
+DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+timestampoutput = dateFormat.format(cal.getTime());
 }
