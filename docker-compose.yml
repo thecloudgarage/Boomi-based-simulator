@@ -188,3 +188,23 @@ services:
       - "8001:8000"
     environment:
       CONNECT_URL: 'kafka-connect:8083'
+
+  gpsinventory:
+    image: postgres:9.5
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: dbpass
+      POSTGRES_DB: gps
+    volumes:
+      - .postgresql/data:/var/lib/postgresql/data
+      - .postgresql/postgresql-dump:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+  adminer:
+    image: adminer
+    restart: always
+    depends_on:
+      - iotinstallation
+    ports:
+      - "32003:8080"
+
