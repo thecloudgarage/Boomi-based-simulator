@@ -1,4 +1,3 @@
-// Validated
 import java.util.*;
 import java.lang.*;
 import java.io.*;
@@ -11,28 +10,27 @@ import java.text.SimpleDateFormat
 import java.io.InputStream;
 import groovy.time.*;
 
-// INPUT VALUES FOR FUNCTION
-// gpsterminalidinput (character)
-// latitudeinput (float)
-// longitudeinput (float)
-// temperatureinput (float)
-// fueldiffinput (float
+// gpsterminalidinput
+// latitudeinput
+// longitudeinput
+// temperatureinput
+// fuelinput
 
-// OUTPUT VALUES FOR FUNCTION
 // gpsterminalidoutput
 // latitudeoutput
 // longitudeoutput
 // incrementaldistance
 // temperatureoutput
-// speedoutput
-// fueldiffoutput
-// fueltotaloutput
+// speed
+// fueldiff
+// fueltotal
 
-int intValue = 2;
+int intValue = 0;
 for ( int i = 0; i <= intValue; i++) {
 
 // Set initial time & Induce delay for every loop
-Thread.sleep(2000);
+sleepTimer = 6000;
+Thread.sleep(sleepTimer);
 
 // Relay the GPS terminal id as-is
 gpsterminalidoutput = gpsterminalidinput;
@@ -68,10 +66,10 @@ incrementaldistance = c * r;
 temperatureoutput = temperatureinput + Math.random() -  Math.random();
 
 // Calculate time difference in hours
-double timediffHours = 6 / 3600;
+double timediffHours = sleepTimer / 3600000;
 
 // Finally calculate speed
-speedoutput = incrementaldistance / 0.001667;
+speedoutput = incrementaldistance / timediffHours;
  
 // Calculate fuel
 
