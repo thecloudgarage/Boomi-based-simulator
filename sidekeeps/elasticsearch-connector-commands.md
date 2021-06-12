@@ -10,7 +10,7 @@ Select JSON and **DELETE** the existing JSON content
 
 ![image](https://user-images.githubusercontent.com/39495790/121776443-7d2e5780-cbaa-11eb-87a7-8d67a6fe316d.png)
 
-**PASTE** the below JSON and then once the message "Kafka connect configuration is correct"...click on CREATE
+**AFTER DELETING EXISTING JSON., PASTE** the below JSON and then once the message "Kafka connect configuration is correct"...click on CREATE
 
 ```
 {    "connector.class":"io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",    "tasks.max": "1",    "topics": "gps",    "key.ignore":"true",    "schema.ignore": "true",    "connection.url": "http://elasticsearch:9200",    "type.name": "gps", "name":"gps"  }
