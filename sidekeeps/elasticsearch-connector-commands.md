@@ -6,11 +6,11 @@ Open the Kafka Connect UI and click NEW then select ELASTICSEARCH
 
 ![image](https://user-images.githubusercontent.com/39495790/121776406-56702100-cbaa-11eb-971c-a16931e55d01.png)
 
-Select JSON and delete the existing content
+Select JSON and **DELETE** the existing JSON content
 
 ![image](https://user-images.githubusercontent.com/39495790/121776443-7d2e5780-cbaa-11eb-87a7-8d67a6fe316d.png)
 
-Paste the below and then once the message "Kafka connect configuration is correct"...click on CREATE
+**PASTE** the below JSON and then once the message "Kafka connect configuration is correct"...click on CREATE
 
 ```
 {    "connector.class":"io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",    "tasks.max": "1",    "topics": "gps",    "key.ignore":"true",    "schema.ignore": "true",    "connection.url": "http://elasticsearch:9200",    "type.name": "gps", "name":"gps"  }
